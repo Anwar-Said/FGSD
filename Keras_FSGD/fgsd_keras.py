@@ -48,7 +48,7 @@ for A in graphs_data:
 
     A=A.astype(np.float32)
     D=np.sum(A,axis=0)
-    L=np.diag(D)-A
+    L=np.diagflat(D)-A
 
     ones_vector=np.ones(L.shape[0])
     fL=np.linalg.pinv(L) #See MATLAB version for faster implementation.
